@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Image</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Deepfake Detection</div>
+        <nav>
+            <a href="#">Features</a>
+            <a href="#">For Business</a>
+            <a href="#">Pricing</a>
+        </nav>
+        <div class="auth-links">
+            <a href="#">Log in</a>
+            <a href="#" class="signup">Sign up</a>
+        </div>
+    </header>
+
+    <div class="content-container">
+        <div class="intro-section">
+            <h1>Deepfake Detection</h1>
+            <p>100% Automatic and Secure</p>
+        </div>
+
+        <div class="upload-section">
+            <div class="upload-box">
+                <button id="uploadButton" onclick="document.getElementById('imageUpload').click()">Upload Image</button>
+                <p>or drop a file, paste an image, or use a URL</p>
+                <input type="file" id="imageUpload" accept="image/*" onchange="processImage()" hidden>
+                <p id="result"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Deepfake Detection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+

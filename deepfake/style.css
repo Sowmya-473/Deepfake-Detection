@@ -1,0 +1,380 @@
+/* General styling for the entire app with an aesthetic beige palette */
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #F6EFE7; /* Light beige background */
+    color: #5A504D; /* Darker beige text */
+}
+
+/* Styling for the intro page */
+.intro-container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.2em;
+    color: #5A504D; /* Dark beige for title */
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+button {
+    font-size: 1em;
+    padding: 12px 25px;
+    margin-top: 20px;
+    background-color: #D9C4B1; /* Soft beige for button */
+    color: #5A504D; /* Dark beige text */
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+}
+
+button:hover {
+    background-color: #C4B09A; /* Darker beige on hover */
+}
+
+/* Styling for the upload page */
+.upload-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.upload-box {
+    background-color: #FFF8F2; /* Lighter beige for box */
+    width: 80%;
+    max-width: 500px;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+input[type="file"] {
+    font-size: 1em;
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: #D9C4B1;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    color: #5A504D;
+}
+
+input[type="file"]::file-selector-button {
+    background-color: #D9C4B1; /* Soft beige for file button */
+    color: #5A504D;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background-color: #C4B09A;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #5A504D; /* Darker beige text */
+    font-weight: 400;
+}
+
+/* Background animated text */
+.background-text {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 8em;
+    color: rgba(90, 80, 77, 0.1); /* Soft beige with low opacity */
+    font-weight: 600;
+    z-index: -1;
+    white-space: nowrap;
+    animation: fadeInOut 6s ease-in-out infinite, moveText 10s linear infinite;
+    pointer-events: none; /* Prevent interaction */
+}
+
+/* Fade in and out animation */
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0.1; }
+    50% { opacity: 0.2; }
+}
+
+/* Slow subtle movement animation */
+@keyframes moveText {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    50% { transform: translate(-48%, -48%) rotate(1deg); }
+    100% { transform: translate(-50%, -50%) rotate(0deg); }
+}
+
+/* General styling for the entire app */
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #F6EFE7;
+    color: #5A504D;
+}
+
+/* Styling for the intro page */
+.intro-container {
+    text-align: center;
+}
+
+.intro-title {
+    font-size: 2.5em;
+    color: #5A504D;
+    margin-bottom: 20px;
+    font-weight: 600;
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start lower */
+    animation: fadeSlideIn 1.5s ease forwards; /* Fade and slide in */
+}
+
+.intro-button {
+    font-size: 1em;
+    padding: 12px 25px;
+    margin-top: 20px;
+    background-color: #D9C4B1;
+    color: #5A504D;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: 500;
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start lower */
+    animation: fadeSlideIn 1.5s ease 0.5s forwards; /* Delay for staggered effect */
+}
+
+.intro-button:hover {
+    background-color: #C4B09A;
+}
+
+/* Animation for fade-in and slide-up */
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* General styling for the entire app */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #F6EFE7;
+    color: #5A504D;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+/* Header styling with animation */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px 40px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    opacity: 0; /* Start hidden */
+    transform: translateY(-20px); /* Start higher */
+    animation: fadeSlideDown 1s ease forwards;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #5A504D;
+    margin-left: 2cm;
+}
+
+nav a {
+    margin: 0 15px;
+    color: #5A504D;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.auth-links a {
+    margin: 0 10px;
+    color: #5A504D;
+    text-decoration: none;
+}
+
+.auth-links .signup {
+    background-color: #D9C4B1;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.auth-links .signup:hover {
+    background-color: #C4B09A;
+}
+
+/* Content layout */
+.content-container {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start lower */
+    animation: fadeSlideUp 1s ease 0.5s forwards; /* Delay for staggered effect */
+}
+
+.intro-section {
+    max-width: 500px;
+}
+
+.intro-section h1 {
+    font-size: 2.5em;
+    font-weight: 600;
+    color: #5A504D;
+    margin-bottom: 10px;
+}
+
+.intro-section p {
+    font-size: 1.2em;
+    color: #5A504D;
+}
+
+/* Upload box styling with animation */
+.upload-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.upload-box {
+    background-color: #FFF;
+    width: 100%;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start lower */
+    animation: fadeSlideUp 1s ease 0.8s forwards; /* Delay for staggered effect */
+}
+
+#uploadButton {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1em;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#uploadButton:hover {
+    background-color: #0056b3;
+}
+
+.upload-box p {
+    color: #5A504D;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #5A504D;
+}
+
+/* Keyframes for fade and slide-up animation */
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Keyframes for fade and slide-down animation */
+@keyframes fadeSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .intro-section, .upload-section {
+        max-width: 100%;
+    }
+
+    .intro-section {
+        margin-bottom: 20px;
+    }
+}
+
+/* Fullscreen Background Video */
+.back-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* Ensures the video covers the screen without distortion */
+    z-index: -1; /* Sends the video to the background */
+}
+
+/* Content styling */
+.content {
+    position: relative;
+    z-index: 1; /* Keeps content above the video */
+    color: white;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+}
+
+/* Optional styling to make text visible on video background */
+h1, p {
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Adds shadow for readability */
+}
+
