@@ -39,7 +39,7 @@ class DeepfakeModel(nn.Module):
 
 # Initialize and load the model
 model = DeepfakeModel()
-model.load_state_dict(torch.load(r"deepfake/model_epoch_40.pt", map_location=device), strict=False)
+model.load_state_dict(torch.load(r"model_epoch_40.pt", map_location=device), strict=False)
 model.to(device)
 model.eval()
 
